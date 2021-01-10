@@ -1,7 +1,7 @@
 <template>
-    <div class="nav-container">
-        <nav-bar-item name="hey" />
-    </div>
+  <div class="nav-container">
+    <nav-bar-item name="hey" />
+  </div>
 </template>
 
 <script>

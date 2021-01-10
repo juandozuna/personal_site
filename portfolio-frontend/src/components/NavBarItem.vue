@@ -1,7 +1,7 @@
 <template>
-    <div>
-        {{name}}
-    </div>
+  <div>
+    {{ name }}
+  </div>
 </template>
 
 <script>
