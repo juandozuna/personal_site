@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import {Vue, Options} from 'vue-class-component';
-import HomeHeroBackground from '@/components/HomeHeroBackground';
+import HomeHeroBackground from '@/components/HomeHeroBackground.vue';
 
 @Options({
   name: 'Home',
