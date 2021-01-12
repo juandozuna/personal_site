@@ -37,6 +37,9 @@ export default defineComponent({
   z-index: -1000;
   width: 100%;
   position: absolute;
+  @media (max-width: $tablet) {
+    background: linear-gradient(#1e3274, #9198e5);
+  }
   .front-bg-decoration {
     width: 100%;
     background: #060b58;
@@ -44,11 +47,15 @@ export default defineComponent({
       height: 60%;
     }
     @media (max-width: $tablet) {
-      height: 40%;
-      clip-path: url(#bgCurve2);
+      height: 100%;
+      clip-path: none;
+      background: linear-gradient(#1e3274, #9198e5);
+      &:first-child {
+        opacity: 0;
+      }
     }
     height: 70%;
-    clip-path: url(#bgCurve);
+    clip-path: url(#bgCurve2);
   }
 }
 </style>
