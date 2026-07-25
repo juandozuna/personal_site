@@ -39,7 +39,7 @@ const payments = [
   {
     name: "Emil Sánchez",
     owed: 450,
-    paid: 0,
+    paid: 450,
     method: null,
     note: "Entrada de la película",
   },
@@ -73,7 +73,7 @@ const payments = [
   },
 ];
 
-const lastUpdated = new Date("2026-07-26T22:03:00-04:00");
+const lastUpdated = new Date("2026-07-27T09:06:00-04:00");
 const money = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "DOP",
