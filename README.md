@@ -5,12 +5,13 @@ hecho con HTML, CSS y JavaScript, sin dependencias ni proceso de compilación.
 
 ## Datos actuales
 
-- 9 personas deben pagar.
+- 10 personas deben pagar.
 - La entrada cuesta RD$450 por persona.
 - Jorge debe RD$300 adicionales por comida: pagó RD$750 en total.
+- Víctor debe RD$300 adicionales por comida: debe RD$750 en total.
 - Luis pagó RD$450.
-- Cobrado: RD$1,200 de RD$4,350.
-- Pendiente: RD$3,150.
+- Cobrado: RD$1,200 de RD$5,100.
+- Pendiente: RD$3,900.
 
 El método usado por Jorge y Luis está marcado como pendiente de confirmar porque
 no se indicó si pagaron en efectivo o por transferencia.

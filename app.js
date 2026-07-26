@@ -58,6 +58,13 @@ const payments = [
     note: "Entrada de la película",
   },
   {
+    name: "Víctor Gil",
+    owed: 750,
+    paid: 0,
+    method: null,
+    note: "Incluye RD$300 de comida",
+  },
+  {
     name: "Marcos Guillen",
     owed: 450,
     paid: 0,
