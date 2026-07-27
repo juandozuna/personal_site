@@ -41,7 +41,7 @@ const payments = [
     owed: 775,
     paid: 450,
     method: "Transferencia bancaria",
-    note: "Incluye RD$325 de comida por ordenar",
+    note: "Incluye RD$325 · pedido #14351103 listo para recoger",
   },
   {
     name: "Jason Guillen",
@@ -80,7 +80,7 @@ const payments = [
   },
 ];
 
-const lastUpdated = new Date("2026-07-27T14:53:00-04:00");
+const lastUpdated = new Date("2026-07-27T15:57:00-04:00");
 const money = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "DOP",
