@@ -5,21 +5,21 @@ const payments = [
     name: "Jorge Sanchez",
     owed: 750,
     paid: 750,
-    method: null,
+    method: "Transferencia bancaria",
     note: "Incluye RD$300 de comida",
   },
   {
     name: "Luis Rodríguez",
     owed: 450,
     paid: 450,
-    method: null,
+    method: "Transferencia bancaria",
     note: "Entrada de la película",
   },
   {
     name: "Brianna Tejada",
     owed: 450,
     paid: 450,
-    method: null,
+    method: "Transferencia bancaria",
     note: "Entrada de la película",
   },
   {
@@ -33,7 +33,7 @@ const payments = [
     name: "Daniel Rodríguez",
     owed: 450,
     paid: 450,
-    method: null,
+    method: "Transferencia bancaria",
     note: "Entrada de la película",
   },
   {
@@ -47,7 +47,7 @@ const payments = [
     name: "Jason Guillen",
     owed: 450,
     paid: 450,
-    method: null,
+    method: "Transferencia bancaria",
     note: "Entrada de la película",
   },
   {
@@ -68,12 +68,12 @@ const payments = [
     name: "Marcos Guillen",
     owed: 450,
     paid: 450,
-    method: null,
+    method: "Transferencia bancaria",
     note: "Entrada de la película",
   },
 ];
 
-const lastUpdated = new Date("2026-07-26T20:57:00-04:00");
+const lastUpdated = new Date("2026-07-26T21:20:00-04:00");
 const money = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "DOP",
@@ -212,4 +212,53 @@ document.querySelectorAll(".filter").forEach((button) => {
   });
 });
 
+const tabs = [...document.querySelectorAll(".view-tab")];
+
+const selectTab = (selectedTab, updateUrl = false) => {
+  tabs.forEach((tab) => {
+    const isSelected = tab === selectedTab;
+    tab.classList.toggle("is-active", isSelected);
+    tab.setAttribute("aria-selected", isSelected);
+    tab.tabIndex = isSelected ? 0 : -1;
+    document.querySelector(`#${tab.dataset.tab}`).hidden = !isSelected;
+  });
+
+  if (updateUrl) {
+    const nextUrl =
+      selectedTab.id === "invoice-tab"
+        ? `${window.location.pathname}${window.location.search}#factura`
+        : `${window.location.pathname}${window.location.search}`;
+    window.history.replaceState(null, "", nextUrl);
+  }
+};
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => selectTab(tab, true));
+  tab.addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+
+    event.preventDefault();
+    let nextIndex;
+    if (event.key === "Home") nextIndex = 0;
+    else if (event.key === "End") nextIndex = tabs.length - 1;
+    else {
+      const direction = event.key === "ArrowRight" ? 1 : -1;
+      nextIndex = (index + direction + tabs.length) % tabs.length;
+    }
+
+    tabs[nextIndex].focus();
+    selectTab(tabs[nextIndex], true);
+  });
+});
+
+const showLinkedTab = () => {
+  if (window.location.hash === "#factura") {
+    selectTab(document.querySelector("#invoice-tab"));
+  }
+};
+
+window.addEventListener("hashchange", showLinkedTab);
+document.querySelector("#print-ticket").addEventListener("click", () => window.print());
+
+showLinkedTab();
 renderPayments();
