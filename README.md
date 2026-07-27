@@ -14,9 +14,8 @@ hecho con HTML, CSS y JavaScript, sin dependencias ni proceso de compilación.
 - Cobrado: RD$4,350 de RD$5,100.
 - Pendiente: RD$750.
 
-Todos los pagos recibidos de Jorge, Luis, Brianna, Camila, Daniel, Jason, José
-Gabriel y Marcos están registrados como transferencias bancarias.
-El método de pago de Emil todavía no está registrado.
+Todos los pagos recibidos de Jorge, Luis, Brianna, Camila, Daniel, Emil, Jason,
+José Gabriel y Marcos están registrados como transferencias bancarias.
 
 ## Factura y entradas
 
