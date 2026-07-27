@@ -214,7 +214,7 @@ document.querySelectorAll(".filter").forEach((button) => {
 
 const tabs = [...document.querySelectorAll(".view-tab")];
 
-const selectTab = (selectedTab) => {
+const selectTab = (selectedTab, updateUrl = false) => {
   tabs.forEach((tab) => {
     const isSelected = tab === selectedTab;
     tab.classList.toggle("is-active", isSelected);
@@ -222,10 +222,18 @@ const selectTab = (selectedTab) => {
     tab.tabIndex = isSelected ? 0 : -1;
     document.querySelector(`#${tab.dataset.tab}`).hidden = !isSelected;
   });
+
+  if (updateUrl) {
+    const nextUrl =
+      selectedTab.id === "invoice-tab"
+        ? `${window.location.pathname}${window.location.search}#factura`
+        : `${window.location.pathname}${window.location.search}`;
+    window.history.replaceState(null, "", nextUrl);
+  }
 };
 
 tabs.forEach((tab, index) => {
-  tab.addEventListener("click", () => selectTab(tab));
+  tab.addEventListener("click", () => selectTab(tab, true));
   tab.addEventListener("keydown", (event) => {
     if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
 
@@ -239,10 +247,18 @@ tabs.forEach((tab, index) => {
     }
 
     tabs[nextIndex].focus();
-    selectTab(tabs[nextIndex]);
+    selectTab(tabs[nextIndex], true);
   });
 });
 
+const showLinkedTab = () => {
+  if (window.location.hash === "#factura") {
+    selectTab(document.querySelector("#invoice-tab"));
+  }
+};
+
+window.addEventListener("hashchange", showLinkedTab);
 document.querySelector("#print-ticket").addEventListener("click", () => window.print());
 
+showLinkedTab();
 renderPayments();
