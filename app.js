@@ -38,10 +38,10 @@ const payments = [
   },
   {
     name: "Emil Sánchez",
-    owed: 450,
+    owed: 775,
     paid: 450,
     method: "Transferencia bancaria",
-    note: "Entrada de la película",
+    note: "Incluye RD$325 de comida por ordenar",
   },
   {
     name: "Jason Guillen",
@@ -71,9 +71,16 @@ const payments = [
     method: "Transferencia bancaria",
     note: "Entrada de la película",
   },
+  {
+    name: "Gerson Kelly",
+    owed: 450,
+    paid: 0,
+    method: null,
+    note: "Entrada de la película",
+  },
 ];
 
-const lastUpdated = new Date("2026-07-27T10:30:00-04:00");
+const lastUpdated = new Date("2026-07-27T14:53:00-04:00");
 const money = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "DOP",

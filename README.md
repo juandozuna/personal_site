@@ -5,20 +5,22 @@ hecho con HTML, CSS y JavaScript, sin dependencias ni proceso de compilación.
 
 ## Datos actuales
 
-- 10 personas deben pagar.
+- 11 personas deben pagar.
 - La entrada cuesta RD$450 por persona.
 - Jorge debe RD$300 adicionales por comida: pagó RD$750 en total.
 - Víctor debe RD$300 adicionales por comida: pagó RD$750 en total.
+- Emil debe RD$325 adicionales por comida: ha pagado RD$450 de RD$775.
+- Gerson Kelly debe RD$450 por su entrada.
 - Luis pagó RD$450.
-- Brianna, Camila, Daniel, Emil, Jason, José Gabriel y Marcos pagaron RD$450 cada uno.
-- Cobrado: RD$5,100 de RD$5,100.
-- Pendiente: RD$0.
+- Brianna, Camila, Daniel, Jason, José Gabriel y Marcos pagaron RD$450 cada uno.
+- Cobrado: RD$5,100 de RD$5,875.
+- Pendiente: RD$775.
 
-Todos los pagos recibidos de Jorge, Luis, Brianna, Camila, Daniel, Emil, Jason,
-José Gabriel, Víctor y Marcos están registrados como transferencias bancarias.
+Los pagos recibidos de Jorge, Luis, Brianna, Camila, Daniel, Emil, Jason, José
+Gabriel, Víctor y Marcos están registrados como transferencias bancarias.
 
-La pestaña **Inicio** se abre por defecto y celebra que las 10 personas
-completaron sus pagos. El seguimiento detallado está en su propia pestaña.
+La pestaña **Inicio** se abre por defecto y resume el estado de las 11 personas.
+El seguimiento detallado está en su propia pestaña.
 
 ## Factura y entradas
 
