@@ -14,9 +14,18 @@ hecho con HTML, CSS y JavaScript, sin dependencias ni proceso de compilación.
 - Cobrado: RD$3,000 de RD$5,100.
 - Pendiente: RD$2,100.
 
-El método usado por Jorge, Luis, Brianna, Daniel, Jason y Marcos está marcado
-como pendiente de confirmar porque no se indicó si pagaron en efectivo o por
-transferencia.
+Todos los pagos recibidos de Jorge, Luis, Brianna, Daniel, Jason y Marcos están
+registrados como transferencias bancarias.
+
+## Factura y entradas
+
+La pestaña **Factura y entradas** contiene el detalle de la orden #14288218:
+película, función, asientos, artículos, impuestos, cargos y total. Al final de
+la página hay un resumen QR descargable e imprimible con los datos de la orden.
+
+El QR del sitio es un resumen digital generado a partir de la factura. Para
+entrar a la sala se debe presentar el código original emitido por Caribbean
+Cinemas.
 
 ## Actualizar un pago
 
