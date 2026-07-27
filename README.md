@@ -10,12 +10,12 @@ hecho con HTML, CSS y JavaScript, sin dependencias ni proceso de compilación.
 - Jorge debe RD$300 adicionales por comida: pagó RD$750 en total.
 - Víctor debe RD$300 adicionales por comida: debe RD$750 en total.
 - Luis pagó RD$450.
-- Brianna, Daniel, Jason y Marcos pagaron RD$450 cada uno.
-- Cobrado: RD$3,000 de RD$5,100.
-- Pendiente: RD$2,100.
+- Brianna, Camila, Daniel, Jason, José Gabriel y Marcos pagaron RD$450 cada uno.
+- Cobrado: RD$3,900 de RD$5,100.
+- Pendiente: RD$1,200.
 
-Todos los pagos recibidos de Jorge, Luis, Brianna, Daniel, Jason y Marcos están
-registrados como transferencias bancarias.
+Todos los pagos recibidos de Jorge, Luis, Brianna, Camila, Daniel, Jason, José
+Gabriel y Marcos están registrados como transferencias bancarias.
 
 ## Factura y entradas
 
