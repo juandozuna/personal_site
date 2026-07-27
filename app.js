@@ -60,8 +60,8 @@ const payments = [
   {
     name: "Víctor Gil",
     owed: 750,
-    paid: 0,
-    method: null,
+    paid: 750,
+    method: "Transferencia bancaria",
     note: "Incluye RD$300 de comida",
   },
   {
@@ -73,7 +73,7 @@ const payments = [
   },
 ];
 
-const lastUpdated = new Date("2026-07-27T09:14:00-04:00");
+const lastUpdated = new Date("2026-07-27T10:30:00-04:00");
 const money = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "DOP",
@@ -177,6 +177,11 @@ document.querySelector("#people-count").textContent = payments.length;
 document.querySelector("#all-filter-count").textContent = payments.length;
 document.querySelector("#paid-filter-count").textContent = totals.paidCount;
 document.querySelector("#pending-filter-count").textContent = pendingCount;
+document.querySelector("#home-people-count").textContent = payments.length;
+document.querySelector("#home-paid-count").textContent =
+  `${totals.paidCount} de ${payments.length}`;
+document.querySelector("#home-collected-total").textContent = formatMoney(totals.collected);
+document.querySelector("#home-outstanding-total").textContent = formatMoney(outstanding);
 document.querySelector("#updated-date").textContent = new Intl.DateTimeFormat("es-DO", {
   day: "numeric",
   month: "short",
@@ -224,10 +229,11 @@ const selectTab = (selectedTab, updateUrl = false) => {
   });
 
   if (updateUrl) {
-    const nextUrl =
-      selectedTab.id === "invoice-tab"
-        ? `${window.location.pathname}${window.location.search}#factura`
-        : `${window.location.pathname}${window.location.search}`;
+    const hashes = {
+      "payments-tab": "#pagos",
+      "invoice-tab": "#factura",
+    };
+    const nextUrl = `${window.location.pathname}${window.location.search}${hashes[selectedTab.id] ?? ""}`;
     window.history.replaceState(null, "", nextUrl);
   }
 };
@@ -251,10 +257,21 @@ tabs.forEach((tab, index) => {
   });
 });
 
+document.querySelectorAll("[data-open-tab]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const tab = document.querySelector(`#${button.dataset.openTab}`);
+    selectTab(tab, true);
+    tab.focus();
+  });
+});
+
 const showLinkedTab = () => {
-  if (window.location.hash === "#factura") {
-    selectTab(document.querySelector("#invoice-tab"));
-  }
+  const linkedTabs = {
+    "#pagos": "#payments-tab",
+    "#factura": "#invoice-tab",
+  };
+  const tabSelector = linkedTabs[window.location.hash] ?? "#home-tab";
+  selectTab(document.querySelector(tabSelector));
 };
 
 window.addEventListener("hashchange", showLinkedTab);

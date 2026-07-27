@@ -8,14 +8,17 @@ hecho con HTML, CSS y JavaScript, sin dependencias ni proceso de compilación.
 - 10 personas deben pagar.
 - La entrada cuesta RD$450 por persona.
 - Jorge debe RD$300 adicionales por comida: pagó RD$750 en total.
-- Víctor debe RD$300 adicionales por comida: debe RD$750 en total.
+- Víctor debe RD$300 adicionales por comida: pagó RD$750 en total.
 - Luis pagó RD$450.
 - Brianna, Camila, Daniel, Emil, Jason, José Gabriel y Marcos pagaron RD$450 cada uno.
-- Cobrado: RD$4,350 de RD$5,100.
-- Pendiente: RD$750.
+- Cobrado: RD$5,100 de RD$5,100.
+- Pendiente: RD$0.
 
 Todos los pagos recibidos de Jorge, Luis, Brianna, Camila, Daniel, Emil, Jason,
-José Gabriel y Marcos están registrados como transferencias bancarias.
+José Gabriel, Víctor y Marcos están registrados como transferencias bancarias.
+
+La pestaña **Inicio** se abre por defecto y celebra que las 10 personas
+completaron sus pagos. El seguimiento detallado está en su propia pestaña.
 
 ## Factura y entradas
 
