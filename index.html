@@ -8,7 +8,7 @@
       content="Panel de seguimiento de los pagos de la noche de cine."
     />
     <meta name="theme-color" content="#0c1716" />
-    <title>Pagos de la película</title>
+    <title>Noche de cine · Spider-Man</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +23,7 @@
     <div class="ambient ambient--two" aria-hidden="true"></div>
 
     <header class="site-header">
-      <a class="brand" href="#" aria-label="Inicio">
+      <a class="brand" href="#" aria-label="Ir al inicio">
         <span class="brand__mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none">
             <path d="M6.5 5.5h11v13h-11z" />
@@ -43,25 +43,37 @@
 
     <main>
       <section class="intro" aria-labelledby="page-title">
-        <p class="eyebrow">Control del grupo</p>
-        <h1 id="page-title">Pagos de la <em>película</em></h1>
+        <p class="eyebrow">Noche de cine</p>
+        <h1 id="page-title">Todo listo para la <em>película</em></h1>
         <p class="intro__copy">
-          Un resumen sencillo de quién ya pagó, la factura de la compra y las
-          entradas del grupo.
+          Los pagos del grupo están completos. Consulta el seguimiento, la
+          factura y las entradas cuando lo necesites.
         </p>
       </section>
 
       <nav class="view-tabs" role="tablist" aria-label="Información de la compra">
         <button
           class="view-tab is-active"
-          id="payments-tab"
+          id="home-tab"
           type="button"
           role="tab"
           aria-selected="true"
+          aria-controls="home-panel"
+          data-tab="home-panel"
+        >
+          Inicio
+        </button>
+        <button
+          class="view-tab"
+          id="payments-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
           aria-controls="payments-panel"
           data-tab="payments-panel"
+          tabindex="-1"
         >
-          Pagos del grupo
+          Seguimiento de pagos
         </button>
         <button
           class="view-tab"
@@ -77,11 +89,65 @@
         </button>
       </nav>
 
+      <section
+        class="tab-panel celebration"
+        id="home-panel"
+        role="tabpanel"
+        aria-labelledby="home-tab"
+      >
+        <div class="celebration__confetti" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span>
+        </div>
+        <div class="celebration__content">
+          <span class="celebration__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="9" />
+              <path d="m7.8 12.1 2.8 2.8 5.8-6.2" />
+            </svg>
+          </span>
+          <p class="eyebrow">Meta completada · 100%</p>
+          <h2>¡Todos pagaron!</h2>
+          <p class="celebration__copy">
+            Las <strong id="home-people-count">0</strong> personas del grupo ya
+            completaron su pago. Solo queda disfrutar la función.
+          </p>
+          <div class="celebration__stats" aria-label="Resumen final">
+            <div>
+              <strong id="home-paid-count">0 de 0</strong>
+              <span>Pagos recibidos</span>
+            </div>
+            <div>
+              <strong id="home-collected-total">RD$0</strong>
+              <span>Total reunido</span>
+            </div>
+            <div>
+              <strong id="home-outstanding-total">RD$0</strong>
+              <span>Por cobrar</span>
+            </div>
+          </div>
+          <p class="celebration__latest">
+            <span aria-hidden="true">✓</span>
+            Último pago: Víctor Gil · Transferencia bancaria
+          </p>
+          <div class="celebration__actions">
+            <button class="ticket-button ticket-button--primary" type="button" data-open-tab="payments-tab">
+              Ver seguimiento
+            </button>
+            <button class="ticket-button" type="button" data-open-tab="invoice-tab">
+              Ver factura y entradas
+            </button>
+          </div>
+        </div>
+      </section>
+
       <div
         class="tab-panel"
         id="payments-panel"
         role="tabpanel"
         aria-labelledby="payments-tab"
+        hidden
       >
         <section class="summary" aria-label="Resumen de pagos">
           <article class="balance-card">
@@ -265,46 +331,46 @@
             <span>30 de julio · 6:15 p. m.</span>
           </div>
         </article>
-      </section>
 
-      <section class="ticket-access" id="entradas" aria-labelledby="ticket-title">
-        <div class="ticket-access__copy">
-          <p class="eyebrow">Acceso rápido</p>
-          <h2 id="ticket-title">Entradas del grupo</h2>
-          <p>
-            Guarda, abre o imprime el resumen QR de la orden para tener a mano
-            los 12 asientos y los datos de recogida.
-          </p>
-          <div class="ticket-actions">
-            <button class="ticket-button ticket-button--primary" id="print-ticket" type="button">
-              Imprimir QR
-            </button>
-            <a class="ticket-button" href="assets/order-14288218-qr.svg" download="orden-14288218-qr.svg">
-              Descargar QR
-            </a>
-          </div>
-        </div>
-        <article class="ticket-pass" id="ticket-pass">
-          <div class="ticket-pass__top">
-            <div>
-              <span class="label">Orden</span>
-              <strong>#14288218</strong>
+        <section class="ticket-access" id="entradas" aria-labelledby="ticket-title">
+          <div class="ticket-access__copy">
+            <p class="eyebrow">Acceso rápido</p>
+            <h2 id="ticket-title">Entradas del grupo</h2>
+            <p>
+              Guarda, abre o imprime el resumen QR de la orden para tener a mano
+              los 12 asientos y los datos de recogida.
+            </p>
+            <div class="ticket-actions">
+              <button class="ticket-button ticket-button--primary" id="print-ticket" type="button">
+                Imprimir QR
+              </button>
+              <a class="ticket-button" href="assets/order-14288218-qr.svg" download="orden-14288218-qr.svg">
+                Descargar QR
+              </a>
             </div>
-            <span>12 entradas</span>
           </div>
-          <img
-            src="assets/order-14288218-qr.svg"
-            width="220"
-            height="220"
-            alt="Código QR con el resumen de la orden 14288218"
-          />
-          <strong>Spider-Man: Brand New Day</strong>
-          <span>30 jul · 6:25 p. m. · Screen 6 CXC</span>
-          <small>
-            Resumen digital creado con los datos de la factura. Para acceder a
-            la sala, presenta el código original emitido por Caribbean Cinemas.
-          </small>
-        </article>
+          <article class="ticket-pass" id="ticket-pass">
+            <div class="ticket-pass__top">
+              <div>
+                <span class="label">Orden</span>
+                <strong>#14288218</strong>
+              </div>
+              <span>12 entradas</span>
+            </div>
+            <img
+              src="assets/order-14288218-qr.svg"
+              width="220"
+              height="220"
+              alt="Código QR con el resumen de la orden 14288218"
+            />
+            <strong>Spider-Man: Brand New Day</strong>
+            <span>30 jul · 6:25 p. m. · Screen 6 CXC</span>
+            <small>
+              Resumen digital creado con los datos de la factura. Para acceder a
+              la sala, presenta el código original emitido por Caribbean Cinemas.
+            </small>
+          </article>
+        </section>
       </section>
     </main>
 
