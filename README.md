@@ -10,12 +10,13 @@ hecho con HTML, CSS y JavaScript, sin dependencias ni proceso de compilación.
 - Jorge debe RD$300 adicionales por comida: pagó RD$750 en total.
 - Víctor debe RD$300 adicionales por comida: debe RD$750 en total.
 - Luis pagó RD$450.
-- Brianna y Daniel pagaron RD$450 cada uno.
-- Cobrado: RD$2,100 de RD$5,100.
-- Pendiente: RD$3,000.
+- Brianna, Daniel, Jason y Marcos pagaron RD$450 cada uno.
+- Cobrado: RD$3,000 de RD$5,100.
+- Pendiente: RD$2,100.
 
-El método usado por Jorge, Luis, Brianna y Daniel está marcado como pendiente
-de confirmar porque no se indicó si pagaron en efectivo o por transferencia.
+El método usado por Jorge, Luis, Brianna, Daniel, Jason y Marcos está marcado
+como pendiente de confirmar porque no se indicó si pagaron en efectivo o por
+transferencia.
 
 ## Actualizar un pago
 
