@@ -25,8 +25,8 @@ const payments = [
   {
     name: "Camila Gómez",
     owed: 450,
-    paid: 0,
-    method: null,
+    paid: 450,
+    method: "Transferencia bancaria",
     note: "Entrada de la película",
   },
   {
@@ -53,8 +53,8 @@ const payments = [
   {
     name: "José Gabriel Gil",
     owed: 450,
-    paid: 0,
-    method: null,
+    paid: 450,
+    method: "Transferencia bancaria",
     note: "Entrada de la película",
   },
   {
@@ -73,7 +73,7 @@ const payments = [
   },
 ];
 
-const lastUpdated = new Date("2026-07-26T21:20:00-04:00");
+const lastUpdated = new Date("2026-07-26T22:03:00-04:00");
 const money = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "DOP",
