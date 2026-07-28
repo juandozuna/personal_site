@@ -10,12 +10,12 @@ hecho con HTML, CSS y JavaScript, sin dependencias ni proceso de compilación.
 - Jorge debe RD$300 adicionales por comida: pagó RD$750 en total.
 - Víctor debe RD$300 adicionales por comida: pagó RD$750 en total.
 - Emil debe RD$325 adicionales por comida: pagó RD$775 en total.
-- Gerson Kelly debe RD$450 por su entrada.
+- Gerson Kelly pagó RD$450 por su entrada.
 - Erny Perez compró su propia entrada y no debe nada al grupo.
 - Luis pagó RD$450.
 - Brianna, Camila, Daniel, Jason, José Gabriel y Marcos pagaron RD$450 cada uno.
-- Cobrado: RD$5,425 de RD$5,875.
-- Pendiente: RD$450.
+- Cobrado: RD$5,875 de RD$5,875.
+- Pendiente: RD$0.
 
 Los pagos recibidos de Jorge, Luis, Brianna, Camila, Daniel, Emil, Jason, José
 Gabriel, Víctor y Marcos están registrados como transferencias bancarias.

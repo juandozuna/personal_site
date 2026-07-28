@@ -74,7 +74,7 @@ const payments = [
   {
     name: "Gerson Kelly",
     owed: 450,
-    paid: 0,
+    paid: 450,
     method: null,
     note: "Entrada de la película",
   },
@@ -87,7 +87,7 @@ const payments = [
   },
 ];
 
-const lastUpdated = new Date("2026-07-28T08:42:00-04:00");
+const lastUpdated = new Date("2026-07-28T08:51:00-04:00");
 const money = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "DOP",
