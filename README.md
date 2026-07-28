@@ -5,21 +5,22 @@ hecho con HTML, CSS y JavaScript, sin dependencias ni proceso de compilación.
 
 ## Datos actuales
 
-- 11 personas deben pagar.
+- 12 personas en el grupo.
 - La entrada cuesta RD$450 por persona.
 - Jorge debe RD$300 adicionales por comida: pagó RD$750 en total.
 - Víctor debe RD$300 adicionales por comida: pagó RD$750 en total.
-- Emil debe RD$325 adicionales por comida: ha pagado RD$450 de RD$775.
+- Emil debe RD$325 adicionales por comida: pagó RD$775 en total.
 - Gerson Kelly debe RD$450 por su entrada.
+- Erny Perez compró su propia entrada y no debe nada al grupo.
 - Luis pagó RD$450.
 - Brianna, Camila, Daniel, Jason, José Gabriel y Marcos pagaron RD$450 cada uno.
-- Cobrado: RD$5,100 de RD$5,875.
-- Pendiente: RD$775.
+- Cobrado: RD$5,425 de RD$5,875.
+- Pendiente: RD$450.
 
 Los pagos recibidos de Jorge, Luis, Brianna, Camila, Daniel, Emil, Jason, José
 Gabriel, Víctor y Marcos están registrados como transferencias bancarias.
 
-La pestaña **Inicio** se abre por defecto y resume el estado de las 11 personas.
+La pestaña **Inicio** se abre por defecto y resume el estado de las 12 personas.
 El seguimiento detallado está en su propia pestaña.
 
 ## Factura y entradas
