@@ -39,7 +39,7 @@ const payments = [
   {
     name: "Emil Sánchez",
     owed: 775,
-    paid: 450,
+    paid: 775,
     method: "Transferencia bancaria",
     note: "Incluye RD$325 · pedido #14351103 listo para recoger",
   },
@@ -78,9 +78,16 @@ const payments = [
     method: null,
     note: "Entrada de la película",
   },
+  {
+    name: "Erny Perez",
+    owed: 0,
+    paid: 0,
+    method: null,
+    note: "Compró su propia entrada · no debe al grupo",
+  },
 ];
 
-const lastUpdated = new Date("2026-07-27T15:57:00-04:00");
+const lastUpdated = new Date("2026-07-28T08:42:00-04:00");
 const money = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "DOP",
@@ -122,6 +129,10 @@ const icons = {
 };
 
 const methodMarkup = (payment) => {
+  if (payment.owed === 0) {
+    return `${icons.unknown}<span>Entrada propia</span>`;
+  }
+
   if (!payment.paid) {
     return `${icons.waiting}<span>Aún no pagado</span>`;
   }
