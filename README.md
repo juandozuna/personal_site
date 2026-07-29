@@ -10,11 +10,11 @@ hecho con HTML, CSS y JavaScript, sin dependencias ni proceso de compilación.
 - Jorge debe RD$300 adicionales por comida: pagó RD$750 en total.
 - Víctor debe RD$300 adicionales por comida: pagó RD$750 en total.
 - Emil debe RD$325 adicionales por comida: pagó RD$775 en total.
+- Luis debe RD$175 adicionales por una soda: pagó RD$625 en total.
 - Gerson Kelly pagó RD$450 por su entrada.
 - Erny Perez compró su propia entrada y no debe nada al grupo.
-- Luis pagó RD$450.
 - Brianna, Camila, Daniel, Jason, José Gabriel y Marcos pagaron RD$450 cada uno.
-- Cobrado: RD$5,875 de RD$5,875.
+- Cobrado: RD$6,050 de RD$6,050.
 - Pendiente: RD$0.
 
 Los pagos recibidos de Jorge, Luis, Brianna, Camila, Daniel, Emil, Jason, José
@@ -26,8 +26,10 @@ El seguimiento detallado está en su propia pestaña.
 ## Factura y entradas
 
 La pestaña **Factura y entradas** contiene el detalle de la orden #14288218:
-película, función, asientos, artículos, impuestos, cargos y total. Al final de
-la página hay un resumen QR descargable e imprimible con los datos de la orden.
+película, función, asientos, artículos, impuestos, cargos y total. También
+incluye los pedidos de comida #14351103 de Emil y #14449067 de Luis. Al final
+de la página hay un resumen QR descargable e imprimible con los datos de la
+orden principal.
 
 El QR del sitio es un resumen digital generado a partir de la factura. Para
 entrar a la sala se debe presentar el código original emitido por Caribbean
