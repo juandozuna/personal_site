@@ -10,10 +10,10 @@ const payments = [
   },
   {
     name: "Luis Rodríguez",
-    owed: 450,
-    paid: 450,
+    owed: 625,
+    paid: 625,
     method: "Transferencia bancaria",
-    note: "Entrada de la película",
+    note: "Incluye RD$175 · pedido #14449067 listo para recoger",
   },
   {
     name: "Brianna Tejada",
@@ -87,7 +87,7 @@ const payments = [
   },
 ];
 
-const lastUpdated = new Date("2026-07-28T08:51:00-04:00");
+const lastUpdated = new Date("2026-07-29T16:52:00-04:00");
 const money = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "DOP",
